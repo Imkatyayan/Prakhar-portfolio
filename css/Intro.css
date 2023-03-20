@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*body{*/
+
+/*}*/
+/*          .row {*/
+/*    zoom: 1; !* For IE 6/7 (trigger hasLayout) *!*/
+
+/*}*/
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+/* .sticky { display: none; } */
+/*.col {*/
+/*	display: block;*/
+/*	float:left;*/
+/*	margin: 1% 0 1% 1.6%;*/
+/*}*/
+/*.col:first-child { margin-left: 0; }*/
+/*.span-2-of-2 {*/
+/*	width: 100%;*/
+/*}*/
+
+/*.span-1-of-2 {*/
+/*	width: 45%;*/
+/*}*/
+/*!*  GO FULL WIDTH AT LESS THAN 480 PIXELS *!*/
+
+@media only screen and (max-width: 480px) {
+
+    .span-2-of-2 {
+        width: 100%;
+    }
+
+    .span-1-of-2 {
+        width: 100%;
+    }
+}
+
+header {
+    width: auto;
+    height: auto;
+    background: #333;
+    font-style: 'Arial';
+    background-image: url(../img/splatter.png);
+    background-repeat: no-repeat;
+    background-position: right;
+	padding-left: 50px;
+}
+
+header .text {
+    padding: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header .text h1 {
+    font-size: 100px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header .text p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header .containers {
+    padding: 20px;
+}
+
+header .containers .image {
+    height: auto;
+    width: auto;
+	padding-left: 100px;
+    
+}
+
+/*
+.container{
+    width: auto;
+    
+}
+.container p{
+     background: #333;
+    opacity: 0.5;
+    border: 2px solid #333;
+    text-align: justify;
+    width: 100%;
+   margin-top: 50px;
+    margin-right: -50px;
+   
+}
+*/
+.Myself {
+    height: auto;
+    width: auto;
+    background: #333;
+    margin: 0;
+    padding: 0;
+
+}
+
+h2 {
+    font-size: 50px;
+    color: #fff;
+}
+
+h2:after {
+    display: block;
+    height: 150px;
+    background-color: #fff;
+    content: " ";
+    width: 6px;
+    margin-left: 20px;
+}
+
+.Myself h1 {
+    padding: 50px;
+    padding-bottom: 0;
+    font-size: 50px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Myself p {
+    padding: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Hire {
+	width: 150px;
+	height: 75px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    outline: none;
+	border-radius: 25px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 13px;
+    border: 2px solid #007faf;
+}
+
+.Hire:hover {
+    background: #212121;
+    color: white;
+    border: 0;
+    outline: none;
+	border: 2px solid #212121;
+}
+
+.CV {
+	width: 150px;
+	height: 50px;
+    cursor: pointer;
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    outline: none;
+	border-radius: 25px;
+    padding: 15px 30px;
+    color: white;
+    border: 2px solid #fff;
+}
+
+.CV:hover {
+    background: #007faf;
+    color: white;
+    border: 0;
+    outline: none;
+	border: 2px solid #007faf;
+}
+a{
+	text-decoration: none;
+	
+}
+
+.wave {
+    background: #333;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100vh;
+    background-image: url(../img/splatter.png);
+    background-repeat: no-repeat;
+   
+}
+
+.card-profile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    background-image: url(../img/splatter.png);
+    background-repeat: no-repeat;
+	padding-bottom: 150px;
+	padding-top: 150px;
+    background-position: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+}
+
+.card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 2s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+
+}
+
+.card .face.front {
+    background: #ff0;
+}
+
+.card:hover .face.front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+    background: #3bc2ff;
+    color: #fff;
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.card .face h7 {
+    font-size: 3em;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    transform: perspective(500px) translateZ(50px);
+}
+
+.Fliping-it {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+    transform: perspective(500px) translateZ(50px);
+    line-height: 1.1;
+}
+
+.Fliping-it:hover {
+    border: 2px solid #fff;
+    padding: 10px 10px;
+    background: transparent;
+}

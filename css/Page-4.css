@@ -1,0 +1,85 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #333;
+	font-family: 'Quicksand', sans-serif;
+	 
+}
+.site-main .project-area{
+    padding: 50px;
+	color: #fff;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px var(--roboto);
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 3rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4{
+    font: normal 700 25px/12px var(--roboto);
+	color: #fff;
+}
+
+.site-main .project-area .grid .our-project .img a:hover img{
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #fff);
+}
+h1{
+	padding-top: 50px;
+	color: white;
+	 font-family: 'Quicksand', sans-serif;
+}
+h4{
+	color: white;
+	 font-family: 'Quicksand', sans-serif;
+}
+
+
+.sticky{
+	position: fixed;
+	top: 0;
+	right: -30px;
+	height: 100px;
+	width: 100px;
+	outline: none;
+	border: 0;
+	text-decoration: none;
+	color: #007faf;
+}
+a {
+text-decoration: none;
+	color:  #007faf;
+}
+
+.arrow{
+  position: relative;
+font-size: 55px;
+    padding-top: 20px;
+    color: white;
+  background-size: contain;
+    cursor: pointer;
+}
+.arrow:hover{
+    color:  #212121;
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-30px);
+  }
+  60% {
+    transform: translateX(-15px);
+  }
+}
