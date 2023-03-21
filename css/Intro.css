@@ -57,7 +57,7 @@ header {
     background-image: url(../img/splatter.png);
     background-repeat: no-repeat;
     background-position: right;
-	padding-left: 50px;
+    padding-left: 50px;
 }
 
 header .text {
@@ -85,7 +85,7 @@ header .containers {
 header .containers .image {
     height: auto;
     width: auto;
-	padding-left: 100px;
+    padding-left: 100px;
     
 }
 
@@ -110,7 +110,7 @@ header .containers .image {
     width: auto;
     background: #333;
     margin: 0;
-    padding: 0;
+    padding-bottom: 50px;
 
 }
 
@@ -149,8 +149,8 @@ h2:after {
 }
 
 .Hire {
-	width: 150px;
-	height: 75px;
+    width: 150px;
+    height: 75px;
     cursor: pointer;
     margin-left: 100px;
     margin-bottom: 100px;
@@ -158,10 +158,10 @@ h2:after {
     align-items: center;
     background: transparent;
     outline: none;
-	border-radius: 25px;
+    border-radius: 25px;
     padding: 15px 30px;
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
     border: 2px solid #007faf;
 }
 
@@ -170,22 +170,23 @@ h2:after {
     color: white;
     border: 0;
     outline: none;
-	border: 2px solid #212121;
+    border: 2px solid #212121;
 }
 
 .CV {
-	width: 150px;
-	height: 50px;
+    width: 150px;
+    height: 50px;
     cursor: pointer;
     margin-left: 100px;
     justify-content: center;
     align-items: center;
     background: transparent;
     outline: none;
-	border-radius: 25px;
+    border-radius: 25px;
     padding: 15px 30px;
     color: white;
     border: 2px solid #fff;
+    font-size: 15px;	
 }
 
 .CV:hover {
@@ -193,7 +194,7 @@ h2:after {
     color: white;
     border: 0;
     outline: none;
-	border: 2px solid #007faf;
+    border: 2px solid #007faf;
 }
 a{
 	text-decoration: none;
@@ -213,15 +214,15 @@ a{
 
 .card-profile {
     width: 100%;
-    height: auto;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #333;
     background-image: url(../img/splatter.png);
     background-repeat: no-repeat;
-	padding-bottom: 150px;
-	padding-top: 150px;
+    padding-bottom: 150px;
+    padding-top: 150px;
     background-position: center;
 }
 
