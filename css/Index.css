@@ -59,3 +59,7 @@ a{
         box-shadow: 0 0 0 0 rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);
     }
 }
+/* Ensure meta tags are displayed */
+meta {
+    display: block !important;
+}
