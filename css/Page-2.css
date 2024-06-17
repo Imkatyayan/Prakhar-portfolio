@@ -554,11 +554,26 @@ font-size: 65px;
     height: 150;
 }
 
-.menu-icon {
-  width: 24px; /* Adjust the width as needed */
-  height: 24px; /* Adjust the height as needed */
-  vertical-align: middle; /* Aligns the icon with the text or other elements */
-}
+ .menu-icon-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      width: 24px; /* Adjust the width as needed */
+      height: 24px; /* Adjust the height as needed */
+      vertical-align: middle;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-icon-container:hover .menu-icon {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
 
 
 
