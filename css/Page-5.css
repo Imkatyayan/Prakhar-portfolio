@@ -2,6 +2,11 @@
 	padding: 0;
 	margin: 0;
 }
+.menu-icon {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  vertical-align: middle; /* Aligns the icon with the text or other elements */
+}
 
 .arrow{
   position: relative;
