@@ -554,6 +554,11 @@ font-size: 65px;
     height: 150;
 }
 
+.menu-icon {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  vertical-align: middle; /* Aligns the icon with the text or other elements */
+}
 
 
 
