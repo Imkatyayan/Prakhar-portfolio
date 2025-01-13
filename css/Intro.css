@@ -3,7 +3,13 @@
     padding: 0;
     margin: 0;
 }
-
+@font-face {
+    font-family: "the_historia_demoregular";
+    src: url("path-to-your-font-file.woff2") format("woff2"),
+    url("path-to-your-font-file.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 /*body{*/
 
 /*}*/
@@ -49,50 +55,171 @@
     }
 }
 
+/*header {*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    background: #333;*/
+/*    font-style: 'Arial';*/
+/*    background-image: url(../img/splatter.png);*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: right;*/
+/*    padding-left: 50px;*/
+/*}*/
+
+/*header .text {*/
+/*    padding: 50px;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*header .text h1 {*/
+/*    font-size: 100px;*/
+/*    color: white;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*}*/
+
+/*header .text p {*/
+/*    font-size: 20px;*/
+/*    color: white;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*}*/
+
+/*header .containers {*/
+/*    padding: 20px;*/
+/*}*/
+
+/*header .containers .image {*/
+/*    height: auto;*/
+/*    width: auto;*/
+/*    padding-left: 100px;*/
+
+/*}*/
+
+/* Header Styling */
 header {
-    width: auto;
-    height: auto;
-    background: #333;
-    font-style: 'Arial';
-    background-image: url(../img/splatter.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    padding-left: 50px;
-}
-
-header .text {
-    padding: 50px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-header .text h1 {
-    font-size: 100px;
+    background-color: #333;
     color: white;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/*.intro-text h1 {*/
+/*    font-size: 3em;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*    color: white;*/
+/*    margin-bottom: 20px;*/
+/*    font-weight: 700;*/
+/*    line-height: 1.2;*/
+/*}*/
+/*.intro-text h3 {*/
+/*    font-size: 3em;*/
+/*    font-family: 'Quicksand', sans-serif;*/
+/*    color: white;*/
+/*    margin-bottom: 20px;*/
+/*    font-weight: 700;*/
+/*    line-height: 1.2;*/
+/*}*/
+.intro-text h1 span {
+    color: #007faf; /* Blue color for the "Hey," part */
+}
+
+.intro-text p {
+    font-size: 1.2em;
     font-family: 'Quicksand', sans-serif;
+    color: #ddd; /* Light grey text for the description */
+    margin-top: 10px;
+    font-weight: 300;
 }
 
-header .text p {
-    font-size: 20px;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
+/* Animation effects */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUpAnimation 1.5s forwards;
 }
 
-header .containers {
-    padding: 20px;
+@keyframes fadeUpAnimation {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-header .containers .image {
-    height: auto;
-    width: auto;
-    padding-left: 100px;
-    
+/* Responsiveness */
+@media (max-width: 767px) {
+    .intro-text h1 {
+        font-size: 2.5em; /* Smaller size on mobile */
+    }
+
+    .intro-text p {
+        font-size: 1em; /* Adjust paragraph size on mobile */
+    }
+}
+
+@media (max-width: 991px) {
+    .intro-text h1 {
+        font-size: 2.8em; /* Slightly smaller size on tablets */
+    }
+}
+
+/* Header Styling */
+header .intro-text h1 {
+    font-size: 6rem; /* Adjust size as needed */
+    font-family: "the_historia_demoregular", sans-serif; /* Use your custom font */
+    padding: 1rem;
+    background: linear-gradient(to top, #007faf, #00e6e9); /* Replace with your colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill for gradient effect */
+    text-fill-color: transparent; /* For better browser support */
+    letter-spacing: 5px;
+    line-height: 1.2; /* Adjust spacing between lines */
+}
+header .intro-text h3 {
+    font-size: 6rem; /* Adjust size as needed */
+    font-family: "the_historia_demoregular", sans-serif; /* Use your custom font */
+    padding: 1rem;
+    background: white; /* Replace with your colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill for gradient effect */
+    text-fill-color: transparent; /* For better browser support */
+    letter-spacing: 5px;
+    line-height: 1.2; /* Adjust spacing between lines */
+}
+header .intro-text p {
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif; /* Use a clean font for the subtitle */
+    color: #ddd; /* Light grey for readability */
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+    header .intro-text h1 {
+        font-size: 4rem; /* Smaller size for mobile */
+    }
+
+    header .intro-text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header .intro-text h1 {
+        font-size: 5rem; /* Adjust font size for tablets */
+    }
 }
 
 /*
 .container{
     width: auto;
-    
+
 }
 .container p{
      background: #333;
@@ -102,9 +229,112 @@ header .containers .image {
     width: 100%;
    margin-top: 50px;
     margin-right: -50px;
-   
+
 }
 */
+
+/* Typewriter effect */
+.line-1 {
+    overflow: hidden; /* Ensures the text doesn't overflow */
+    white-space: nowrap; /* Keeps the text on a single line */
+    border-right: 2px solid #00e6e9; /* Cursor effect */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00e6e9;
+    }
+}
+ .Header__shape {
+     animation-duration: 4s;
+     animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+     animation-fill-mode: backwards;
+     transform-origin: center;
+     transform-box: fill-box;
+}
+
+.Header {
+    position: relative;
+    /*min-height: 100vh;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header__svg {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    will-change: transform;
+}
+.Header__title {
+    font-family: Avenir, Futura, 'Open Sans', 'Gill Sans', 'Helvetica Neue', Ariel, sans-serif;
+    font-weight: bold;
+    font-size: 6vw;
+    margin: 0;
+}
+
+.bigSquare {
+    animation-name: bigSquare;
+}
+@keyframes bigSquare {
+    from { transform: translateY(10%) rotate(-80deg) scale(0); }
+    to { transform: translateY(0) rotate(0deg) scale(1); }
+}
+.littleSquare {
+    animation-name: littleSquare;
+}
+@keyframes littleSquare {
+    from { transform: translate(226%, 183%) rotate(140deg) scale(0) ; }
+    to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+}
+.triangle {
+    animation-name: triangle;
+}
+@keyframes triangle {
+    from { transform: rotate(-140deg) scale(0) ; }
+    to { transform: rotate(0deg) scale(1); }
+}
+.hoop {
+    animation-name: hoop;
+}
+@keyframes hoop {
+    from { transform: translate(-160%, -33%) scale(0) ; }
+    to { transform: translate(0%, 0%) scale(1); }
+}
+.bigCircle {
+    animation-name: bigCircle;
+}
+@keyframes bigCircle {
+    from { transform: scale(0) translate(60%, 3%); }
+    to { transform: scale(1) translate(0%, 0%); }
+}
+.littleCircle {
+    animation-name: littleCircle;
+}
+@keyframes littleCircle {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
+
+
 .Myself {
     height: auto;
     width: auto;
