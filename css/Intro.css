@@ -99,12 +99,12 @@
 header {
     background-color: #333;
     color: white;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 75vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 0;
+/*     padding: 40px 0; */
 }
 
 /*.intro-text h1 {*/
