@@ -552,7 +552,7 @@ footer {
     display: flex;            /* Using flexbox */
     justify-content: center;  /* Centers horizontally */
     align-items: center;      /* Centers vertically */
-    height: 100px;            /* Adjust the height as needed */
+    height: auto;            /* Adjust the height as needed */
     background-color: #212121; /* Optional: Add a background color */
 }
 
