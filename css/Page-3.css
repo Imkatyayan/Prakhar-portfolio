@@ -397,7 +397,7 @@ transform-box: fill-box;
 
 /* Contact Title Styling */
 .contact-title h5 {
-    font-size: 7rem;
+    font-size: 5rem;
     text-transform: uppercase;
     color: #fff;
     opacity: 0.8;
@@ -412,7 +412,7 @@ transform-box: fill-box;
 
 /* Subtitle Styling */
 .sub {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #bbb; /* Light gray text for better contrast */
     margin-bottom: 30px;
     line-height: 1.5;
