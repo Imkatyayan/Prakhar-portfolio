@@ -561,7 +561,7 @@ footer p {
     margin: 0;                /* Remove default margin */     /* Adjust font size if needed */
     text-align: center;
     color: #fff;/* Center text */
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 footer a{
