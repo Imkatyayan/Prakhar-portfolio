@@ -606,6 +606,32 @@ font-size: 65px;
 }
 
 
+footer {
+    display: flex;            /* Using flexbox */
+    flex-direction: column;   /* Arrange items in a column */
+    justify-content: center;  /* Center content vertically within the footer */
+    align-items: center;      /* Center content horizontally */
+    height: auto;             /* Adjust the height as needed */
+    background-color: #212121; /* Optional: Add a background color */
+    padding: 20px;
+}
 
+footer p {
+    display: block; /* Ensure paragraphs are block-level elements */
+    margin: 10px 0; /* Add spacing between paragraphs */
+    text-align: center; /* Center text */
+    color: #fff; /* Text color */
+    font-size: 1rem; /* Font size */
+}
+
+footer a {
+    font-size: 1rem;
+    color: #00e6e9;
+    text-decoration: none; /* Optional: Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
 
 
