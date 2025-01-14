@@ -334,6 +334,34 @@ header .intro-text p {
     to { transform: scale(1) }
 }
 
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Individual Icon Styling */
+.social-icons .icon ion-icon {
+    font-size: 35px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #fff; /* Default color */
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.social-icons .icon:hover ion-icon {
+    transform: scale(1.2); /* Slight enlargement */
+    color: #007faf; /* Change color on hover */
+}
+
+/* Anchor Tag Styling */
+.social-icons .icon {
+    text-decoration: none; /* Remove underline for links */
+}
+
 
 .Myself {
     height: auto;
