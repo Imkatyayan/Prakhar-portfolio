@@ -554,6 +554,7 @@ footer {
     align-items: center;      /* Centers vertically */
     height: auto;            /* Adjust the height as needed */
     background-color: #212121; /* Optional: Add a background color */
+    padding: 20px;	
 }
 
 footer p {
