@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    background-color: #333;
 }
 
 .blob-Intro{
@@ -96,7 +97,85 @@ h3:hover span:nth-child(6){
 h3:hover span:nth-child(8){
     transition-delay: 1.7s;
 }
- 
+
+
+.Header__shape {
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+    animation-fill-mode: backwards;
+    transform-origin: center;
+// this here is the good stuff
+transform-box: fill-box;
+}
+
+.Header {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.Header__svg {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    will-change: transform;
+}
+.Header__title {
+    /*font-family: Avenir, Futura, 'Open Sans', 'Gill Sans', 'Helvetica Neue', Ariel, sans-serif;*/
+    font-weight: bold;
+    font-size: 7em;
+    margin: 0;
+    color: #fff;
+}
+
+.bigSquare {
+    animation-name: bigSquare;
+}
+@keyframes bigSquare {
+    from { transform: translateY(10%) rotate(-80deg) scale(0); }
+    to { transform: translateY(0) rotate(0deg) scale(1); }
+}
+.littleSquare {
+    animation-name: littleSquare;
+}
+@keyframes littleSquare {
+    from { transform: translate(226%, 183%) rotate(140deg) scale(0) ; }
+    to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+}
+.triangle {
+    animation-name: triangle;
+}
+@keyframes triangle {
+    from { transform: rotate(-140deg) scale(0) ; }
+    to { transform: rotate(0deg) scale(1); }
+}
+.hoop {
+    animation-name: hoop;
+}
+@keyframes hoop {
+    from { transform: translate(-100%, -33%) scale(0) ; }
+    to { transform: translate(0%, 0%) scale(1); }
+}
+.bigCircle {
+    animation-name: bigCircle;
+}
+@keyframes bigCircle {
+    from { transform: scale(0) translate(60%, 3%); }
+    to { transform: scale(1) translate(0%, 0%); }
+}
+.littleCircle {
+    animation-name: littleCircle;
+}
+@keyframes littleCircle {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
+
 
 .skills{
     margin: 0;
@@ -183,12 +262,9 @@ h3:hover span:nth-child(8){
     margin: 0;
     padding: 50px;
     background: #333;
-    min-height: 100vh;
+    min-height: auto;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/wavy2.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .service-box{
     width:auto;
@@ -231,17 +307,19 @@ h3:hover span:nth-child(8){
 
 .container-services{
     position: relative;
-    max-width: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: minmax(100px, auto);
-    margin: 40px;
+    /*margin: 40px;*/
+    padding-right: 40px;
     grid-auto-flow: dense;
-    grid-gap: 10px;
+    grid-gap: 25px;
+
 }
 .container-services .box-services{
     background: #212121;
-    padding: 20px;
+    padding: 50px;
     display: grid;
     place-items: center;
     text-align: center;
@@ -261,22 +339,22 @@ h3:hover span:nth-child(8){
     max-width: 100px;
     margin-bottom: 10px;
 }
-.container-services .box-services:nth-child(1){
-    grid-column: span 2;
-    grid-row: span 1;
-}
-.container-services .box-services:nth-child(2){
-    grid-column: span 1;
-    grid-row: span 2;
-}
-.container-services .box-services:nth-child(4){
-    grid-column: span 1;
-    grid-row: span 2;
-}
-.container-services .box-services:nth-child(5){
-    grid-column: span 3;
-    grid-row: span 1;
-}
+/*.container-services .box-services:nth-child(1){*/
+/*    grid-column: span 2;*/
+/*    grid-row: span 1;*/
+/*}*/
+/*.container-services .box-services:nth-child(2){*/
+/*    grid-column: span 1;*/
+/*    grid-row: span 2;*/
+/*}*/
+/*.container-services .box-services:nth-child(4){*/
+/*    grid-column: span 1;*/
+/*    grid-row: span 2;*/
+/*}*/
+/*.container-services .box-services:nth-child(5){*/
+/*    grid-column: span 3;*/
+/*    grid-row: span 1;*/
+/*}*/
 @media (max-width: 991px)
 {
     .container-services
@@ -301,4 +379,191 @@ h3:hover span:nth-child(8){
 }
 
 
+.contact{
+    height: auto;
+    width: auto;
+    background: #333;
+    margin: 0;
+    padding: 50px;
 
+}
+/* Contact Section Styling */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: auto;
+    min-width: auto;
+}
+
+/* Contact Title Styling */
+.contact-title h5 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.contact-title h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Subtitle Styling */
+.sub {
+    font-size: 1.5rem;
+    color: #bbb; /* Light gray text for better contrast */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px; /* Limit the max width for better alignment on larger screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 80px; /* Increased padding for better spacing */
+    border-top: 1px solid #333; /* Top border */
+    border-bottom: 1px solid #333; /* Bottom border */
+    background-color:#212121; /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    height: auto; /* Adjust height to content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Input Row Styling */
+.input-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Side Inputs */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.side label {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.side input,
+.textarea textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.side input::placeholder,
+.textarea textarea::placeholder {
+    color: #777;
+}
+
+.side input:focus,
+.textarea textarea:focus {
+    border-bottom-color: #00e6e9;
+}
+
+/* Textarea Styling */
+.textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.textarea label {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.textarea textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+}
+
+/* Button Styling */
+button {
+    background: none;
+    border: 1px solid #00e6e9;
+    color: #00e6e9;
+    padding: 20px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #00e6e9;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust input fields to be in column layout on smaller screens */
+    .input-row {
+        flex-direction: column;
+    }
+
+    /* Adjust heading size on smaller screens */
+    .contact-title h5 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust sub-text size */
+    .sub {
+        font-size: 1rem;
+    }
+
+    /* Adjust button font size on smaller screens */
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+footer {
+    display: flex;            /* Using flexbox */
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100px;            /* Adjust the height as needed */
+    background-color: #212121; /* Optional: Add a background color */
+}
+
+footer p {
+    margin: 0;                /* Remove default margin */     /* Adjust font size if needed */
+    text-align: center;
+    color: #fff;/* Center text */
+    font-size: 1.2rem;
+}
+
+footer a{
+    font-size: 1.2rem;
+    color: #00e6e9;
+}
