@@ -377,7 +377,11 @@ transform-box: fill-box;
     width: 100%;
 	padding-bottom: 100px;
 }
-
+.project-work a {
+    font-size: 1rem;
+    color: #00e6e9;
+    text-decoration: none; /* Optional: Remove underline from links */
+}
 
 .contact{
     height: auto;
