@@ -2,14 +2,14 @@
 Grid System Variables
 ====================*/
 :root {
-    /* Your dark grey base */
-    --base-bg: #333333; 
+    /* A slightly lighter grey base to brighten the page up */
+    --base-bg: #444444; 
     
-    /* Extremely subtle grid lines for a clean look */
-    --grid-line-color: rgba(255, 255, 255, 0.03); 
+    /* Clean, subtle grid lines */
+    --grid-line-color: rgba(255, 255, 255, 0.04); 
     
-    /* Soft, transparent blue edge accent */
-    --glow-blue: rgba(0, 127, 175, 0.25);    /* #007faf */
+    /* Your exact #007faf blue as a soft, transparent glow */
+    --glow-blue: rgba(0, 127, 175, 0.3);    
 }
 
 body {
@@ -38,8 +38,8 @@ Grid Background Layers
     position: absolute;
     inset: 0;
     background:
-      /* Soft blue pushed strictly to the bottom left edge */
-      radial-gradient(circle at bottom left, var(--glow-blue), transparent 40%);
+      /* Only the pure blue glow, radiating from the bottom left */
+      radial-gradient(circle at bottom left, var(--glow-blue), transparent 45%);
     z-index: 0;
 }
 
