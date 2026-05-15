@@ -7,13 +7,16 @@ Grid System Variables
     --glow-blue: rgba(0, 127, 175, 0.3);    
 }
 
-body {
+/* Fix for mobile scrolling and address bar gaps */
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%; /* Fallback */
+    height: 100dvh; /* Dynamic viewport height locks exactly to the visible screen */
+    overflow: hidden; /* Strictly prevents scrolling on all devices */
     background-color: var(--base-bg);
     font-family: 'Quicksand', sans-serif;
-    overflow: hidden;
-    height: 100vh;
 }
 
 img {
@@ -60,8 +63,9 @@ Final Text Arrival
     position: absolute; 
     top: 50%; left: 50%;
     transform: translate(-50%, -50%); 
-    width: 30vw; height: 30vw;
-    /* Reduced delay to 0.2s so it loads quickly */
+    /* clamp() ensures the container is never too small on mobile or too massive on PC */
+    width: clamp(280px, 40vw, 500px); 
+    height: clamp(280px, 40vw, 500px);
     animation: name_slide_up 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s forwards;
     opacity: 0;
 }
@@ -71,7 +75,8 @@ Final Text Arrival
     top: 50%; left: 50%;
     transform: translate(-50%, -50%); 
     color: #fff; 
-    font-size: 2.0vw;
+    /* Fluid typography: Minimum 20px, scales with screen, max 40px */
+    font-size: clamp(20px, 3vw, 40px);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 0.1em;
     white-space: nowrap; 
@@ -89,25 +94,27 @@ Final Text Arrival
 
 .name_circle01 {
     position: absolute; 
-    top: 50%; left: 20%;
+    top: 50%; left: 15%; 
     transform: translate(-50%, -50%); 
     background-color: #fff;
-    width: 2vw; height: 2vw; 
+    /* Fluid sizing for the dots */
+    width: clamp(10px, 2vw, 20px); 
+    height: clamp(10px, 2vw, 20px); 
     border-radius: 50%;
     opacity: 0;
-    /* Adjusted delay to pop in slightly after text */
     animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s forwards;
 }
 
 .name_circle02 {
     position: absolute; 
-    top: 50%; left: 80%;
+    top: 50%; left: 85%; 
     transform: translate(-50%, -50%); 
     background-color: #fff;
-    width: 2vw; height: 2vw; 
+    /* Fluid sizing for the dots */
+    width: clamp(10px, 2vw, 20px); 
+    height: clamp(10px, 2vw, 20px); 
     border-radius: 50%;
     opacity: 0;
-    /* Staggered delay */
     animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s forwards;
 }
 
