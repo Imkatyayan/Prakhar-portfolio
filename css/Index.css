@@ -2,13 +2,8 @@
 Grid System Variables
 ====================*/
 :root {
-    /* A slightly lighter grey base to brighten the page up */
     --base-bg: #444444; 
-    
-    /* Clean, subtle grid lines */
     --grid-line-color: rgba(255, 255, 255, 0.04); 
-    
-    /* Your exact #007faf blue as a soft, transparent glow */
     --glow-blue: rgba(0, 127, 175, 0.3);    
 }
 
@@ -37,9 +32,7 @@ Grid Background Layers
 .grid-gradient-bg {
     position: absolute;
     inset: 0;
-    background:
-      /* Only the pure blue glow, radiating from the bottom left */
-      radial-gradient(circle at bottom left, var(--glow-blue), transparent 45%);
+    background: radial-gradient(circle at bottom left, var(--glow-blue), transparent 45%);
     z-index: 0;
 }
 
@@ -60,247 +53,28 @@ Grid Background Layers
     height: 100%;
 }
 
-/*===================
-animation01
-====================*/
-.animation01 {
-    position: absolute; width: 100%; height: 100%;
-}
-
-.border_box {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 15vw; height: 15vw;
-}
-
-.line {
-    display: block; position: absolute; right: 0; bottom: 0;
-    background-color: #845b46; opacity: 0;
-}
-
-.line01 {
-    top: 0; left: 100%; width: 0.15vw; height: 15.15vw;
-    transform-origin: bottom;
-    animation: animation01_line01 0.2s linear 0s forwards;
-}
-
-.line03 {
-    top: 0; left: 0; width: 0.15vw; height: 15.15vw;
-    transform-origin: bottom;
-    animation: animation01_line01 0.2s linear 0.1s forwards;
-}
-
-@keyframes animation01_line01 {
-    0% { transform: scale3d(1,0,1); opacity: 1; }
-    100% { transform: scale3d(1,1,1); opacity: 1; }
-}
-
-.line02 {
-    top: 100%; left: 0; width: 15.15vw; height: 0.15vw;
-    transform-origin: right;
-    animation: animation01_line02 0.2s linear 0s forwards;
-}
-
-.line04 {
-    top: 0; left: 0; width: 15.15vw; height: 0.15vw;
-    transform-origin: left;
-    animation: animation01_line02 0.2s linear 0.1s forwards;
-}
-
-@keyframes animation01_line02 {
-    0% { transform: scale3d(0,1,1); opacity: 1; }
-    100% { transform: scale3d(1,1,1); opacity: 1; }
-}
-
-/* HIDDEN: Unnecessary dots and shooting lines */
-.circle, .animation_line_wrapper {
-    display: none; 
-}
-
-.wave {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 13.5vw; height: 13.5vw; overflow: hidden;
-}
-
-.wave_wrapper {
-    width: 200%; height: 150%; position: absolute;
-    top: -25%; right: 0; bottom: 0; left: -50%;
-    margin: 0 auto;
-    animation: animation01_wave_wrapper 0.5s linear 0.3s forwards;
-}
-
-@keyframes animation01_wave_wrapper {
-    0% { transform: rotate(0); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(0); }
-    75% { transform: rotate(-15deg); }
-    100% { transform: rotate(0); }
-}
-
-.wave_box {
-    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-    margin: 0 auto; width: 100%; height: 100%;
-    background-color: #fff; transform-origin: bottom;
-    animation: animation01_wave_box 0.5s linear 0.3s forwards;
-    opacity: 0;
-}
-
-@keyframes animation01_wave_box {
-    0% { transform: scale3d(1,0,1); opacity: 1; }
-    100% { transform: scale3d(1,1,1); opacity: 1; }
-}
-
-.rhombus {
-    position: absolute; width: 100%; height: 100%;
-    animation: rhombus 0.2s linear 0.8s forwards;
-}
-
-@keyframes rhombus {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(45deg); }
-}
-
-.rhombus_small {
-    position: absolute; width: 100%; height: 100%;
-    animation: rhombus_small 0.3s linear 1.0s forwards;
-}
-
-@keyframes rhombus_small {
-    0% { transform: scale3d(1,1,1); opacity: 1; }
-    99% { transform: scale3d(0.15,0.15,0.15); opacity: 1; }
-    100% { transform: scale3d(0.15,0.15,0.15); opacity: 0; }
-}
-
-/*===================
-animation02
-====================*/
-.animation02 {
-    position: absolute; width: 100%; height: 100%;
-}
-
-/* HIDDEN: Outer floating diamonds */
-.rhombus_box {
-    display: none;
-}
-
-.double_content {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; height: 100%;
-}
-
-.double_wrapper02 {
-    position: relative; width: 100%; height: 100%;
-    animation: double_content forwards; opacity: 0;
-}
-
-.double_wrapper01 {
-    display: block; position: absolute;
-    border-radius: 50%; overflow: hidden;
-}
-
-.double_wrapper01::before, .double_wrapper01::after {
-    content: ""; display: block; position: absolute;
-    background: var(--base-bg); /* Updated to blend with grid background */
-    z-index: 2;
-}
-
-.double_wrapper01::after {
-    z-index: 3;
-}
-
-/* HIDDEN: Complex circle layers (Dotted and Gray) */
-.dotted02, .gray02 {
-    display: none;
-}
-
-/*============
-white circle
-============*/
-.white02 { top: -100%; animation-delay: 1.2s; }
-
-.white01 {
-    width: 29vw; height: 29vw; background: #fff; z-index: 1;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-}
-
-.white01::before {
-    top: 0; left: 14.5vw; width: 29vw; height: 29vw;
-    transform-origin: left 14.5vw;
-    animation: rotate-circle-right 0.3s linear 1.2s forwards;
-}
-
-.white01::after {
-    top: 0; left: -14.5vw; width: 29vw; height: 29vw;
-    transform-origin: right 14.5vw;
-    animation: rotate-circle-left 0.3s linear 1.2s forwards;
-}
-
-@keyframes rotate-circle-left {
-    0% { transform: rotate(0deg); background: var(--base-bg); }
-    50% { transform: rotate(-180deg); background: var(--base-bg); }
-    50.01% { transform: rotate(-360deg); background: #fff; }
-    100% { transform: rotate(-360deg); background: #fff; }
-}
-
-/*============
-orange circle
-============*/
-.orange02 { top: -300%; animation-delay: 1.4s; }
-
-.orange01 {
-    width: 27vw; height: 27vw; background: #f47141; z-index: 1;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-}
-
-.orange01::before {
-    top: 0; left: 13.5vw; width: 27vw; height: 27vw;
-    background: #fff; transform-origin: left 13.5vw;
-    animation: rotate-circle-right 0.4s linear 1.4s forwards;
-}
-
-.orange01::after {
-    top: 0; left: -13.5vw; width: 27vw; height: 27vw;
-    background: #fff; transform-origin: right 13.5vw;
-    animation: rotate-circle-left02 0.4s linear 1.4s forwards;
-}
-
-@keyframes rotate-circle-left02 {
-    0% { transform: rotate(0deg); background: #fff; }
-    50% { transform: rotate(-180deg); background: #fff; }
-    50.01% { transform: rotate(-360deg); background: #f47141; }
-    100% { transform: rotate(-360deg); background: #f47141; }
-}
-
-@keyframes double_content {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes rotate-circle-right {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(0deg); }
-    100% { transform: rotate(-180deg); }
-}
-
 /*============
 Final Text Arrival
 ============*/
 .name {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); width: 30vw; height: 30vw;
-    /* Smooth sliding entrance for the whole block */
-    animation: name_slide_up 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.8s forwards;
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 30vw; height: 30vw;
+    /* Reduced delay to 0.2s so it loads quickly */
+    animation: name_slide_up 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s forwards;
     opacity: 0;
 }
 
 .name p {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); color: #fff; font-size: 2.0vw;
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    font-size: 2.0vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 0.1em;
-    white-space: nowrap; /* Keeps text on one line */
+    white-space: nowrap; 
 }
 
 .name a {
@@ -310,25 +84,31 @@ Final Text Arrival
 }
 
 .name a:hover {
-    opacity: 0.7; /* Gentle hover effect */
+    opacity: 0.7; 
 }
 
 .name_circle01 {
-    position: absolute; top: 50%; left: 20%;
-    transform: translate(-50%, -50%); background-color: #fff;
-    width: 2vw; height: 2vw; border-radius: 50%;
+    position: absolute; 
+    top: 50%; left: 20%;
+    transform: translate(-50%, -50%); 
+    background-color: #fff;
+    width: 2vw; height: 2vw; 
+    border-radius: 50%;
     opacity: 0;
-    /* Pop-in effect just slightly after the text starts sliding */
-    animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.1s forwards;
+    /* Adjusted delay to pop in slightly after text */
+    animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s forwards;
 }
 
 .name_circle02 {
-    position: absolute; top: 50%; left: 80%;
-    transform: translate(-50%, -50%); background-color: #fff;
-    width: 2vw; height: 2vw; border-radius: 50%;
+    position: absolute; 
+    top: 50%; left: 80%;
+    transform: translate(-50%, -50%); 
+    background-color: #fff;
+    width: 2vw; height: 2vw; 
+    border-radius: 50%;
     opacity: 0;
-    /* Staggered pop-in slightly after the first dot */
-    animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.2s forwards;
+    /* Staggered delay */
+    animation: dot_pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s forwards;
 }
 
 @keyframes name_slide_up {
