@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+body { 
+    background-color: #333; 
+}
+
 @font-face {
     font-family: "the_historia_demoregular";
     src: url("path-to-your-font-file.woff2") format("woff2"),
@@ -37,7 +41,7 @@ header {
     overflow: hidden;
     background-color: #333;
     color: white;
-    min-height: 100vh;
+    min-height: 85vh;
     padding: 80px 20px;
 
     display: flex;
@@ -67,15 +71,6 @@ header {
         linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
     background-size: 60px 60px;
     z-index: 1;
-}
-
-/* Keep content above decorative layers */
-.header-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 /* Gradient headline */
