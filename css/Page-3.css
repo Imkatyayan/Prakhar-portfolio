@@ -104,7 +104,7 @@ h3:hover span:nth-child(8){
     animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
     animation-fill-mode: backwards;
     transform-origin: center;
-// this here is the good stuff
+
 transform-box: fill-box;
 }
 
@@ -378,7 +378,7 @@ transform-box: fill-box;
 	padding-bottom: 100px;
 }
 .project-work a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #00e6e9;
     text-decoration: none; /* Optional: Remove underline from links */
 }
@@ -416,7 +416,7 @@ transform-box: fill-box;
 
 /* Subtitle Styling */
 .sub {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #bbb; /* Light gray text for better contrast */
     margin-bottom: 30px;
     line-height: 1.5;
@@ -464,7 +464,7 @@ form {
 }
 
 .side label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
     color: #fff;
 }
@@ -476,7 +476,7 @@ form {
     border-bottom: 1px solid #555;
     color: #fff;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     outline: none;
     transition: border-color 0.3s ease;
     width: 100%;
@@ -500,7 +500,7 @@ form {
 }
 
 .textarea label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
     color: #fff;
 }
@@ -517,7 +517,7 @@ button {
     border: 1px solid #00e6e9;
     color: #00e6e9;
     padding: 20px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -543,7 +543,7 @@ button:hover {
 
     /* Adjust sub-text size */
     .sub {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     /* Adjust button font size on smaller screens */
@@ -567,11 +567,11 @@ footer p {
     margin: 10px 0; /* Add spacing between paragraphs */
     text-align: center; /* Center text */
     color: #fff; /* Text color */
-    font-size: 1rem; /* Font size */
+    font-size: 1.2rem; /* Font size */
 }
 
 footer a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #00e6e9;
     text-decoration: none; /* Optional: Remove underline from links */
 }
