@@ -132,6 +132,121 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- ================= ADDED INTERACTIVE PARTICLE BACKGROUND ================= -->
+<canvas id="particles"></canvas>
+<style>
+    /* 1. Securely position the canvas in the deepest background */
+    #particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    /* 2. Make section backgrounds transparent so the canvas is visible */
+    header, .Myself, .card-profile {
+        background-color: transparent !important;
+    }
+    
+    /* 3. FIX: Properly stack the existing grid, gradient, and content over the canvas 
+               WITHOUT overriding their absolute positioning */
+    .grid-gradient-bg { z-index: 1 !important; }
+    .grid-lines       { z-index: 2 !important; }
+    .header-content   { position: relative; z-index: 3 !important; }
+    .container-fluid, .card, .wave { position: relative; z-index: 3 !important; }
+</style>
 
+<script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let W, H, parts = [];
+
+    function resize() {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function makePart() {
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        /* Increased base speed */
+        vx: (Math.random() - .5) * .5,
+        vy: (Math.random() - .5) * .5,
+        r: Math.random() * 1.5 + .5,
+        a: Math.random() * .6 + .1,
+        color: Math.random() < .15 ? '#007faf' : '#00e6e9'
+      };
+    }
+
+    /* INCREASED INTENSITY: 180 particles */
+    for (let i = 0; i < 180; i++) parts.push(makePart());
+
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      parts.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
+
+        const dx = p.x - mouseX, dy = p.y - mouseY;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        
+        /* Increased mouse repel radius and force */
+        if (d < 150) {
+          const f = .5 / d;
+          p.vx += dx * f;
+          p.vy += dy * f;
+        }
+
+        p.vx *= .999;
+        p.vy *= .999;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.a;
+        ctx.fill();
+      });
+
+      ctx.globalAlpha = 1;
+      for (let i = 0; i < parts.length; i++) {
+        for (let j = i + 1; j < parts.length; j++) {
+          const dx = parts[i].x - parts[j].x;
+          const dy = parts[i].y - parts[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          
+          /* Increased connection distance for denser web */
+          if (d < 120) {
+            ctx.beginPath();
+            ctx.moveTo(parts[i].x, parts[i].y);
+            ctx.lineTo(parts[j].x, parts[j].y);
+            /* Slightly boosted opacity for the lines */
+            ctx.strokeStyle = `rgba(0, 230, 233, ${.15 * (1 - d / 120)})`;
+            ctx.lineWidth = .5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+</script>
+<!-- ================= END ADDED INTERACTIVE PARTICLE BACKGROUND ================= -->
 </body>
 </html>
