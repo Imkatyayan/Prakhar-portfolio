@@ -566,7 +566,7 @@ header {
     inset: 0;
 
     background: radial-gradient(
-        circle at bottom left,
+        circle at top right,
         rgba(0, 127, 175, 0.30),
         transparent 45%
     );
