@@ -238,9 +238,9 @@ h2:after {
 }
 
 .Hire {
-    background: transparent;
+    background: #007faf;
     color: rgba(255, 255, 255, 0.92);
-    border: 1.2px solid rgba(0, 127, 175, 0.75);
+    border: 1px solid rgba(0, 127, 175, 0.75);
 }
 
 .Hire:hover {
@@ -253,8 +253,8 @@ h2:after {
 
 .CV {
     background: transparent;
-    color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255);
 }
 
 .CV:hover {
