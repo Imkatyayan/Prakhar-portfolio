@@ -20,3 +20,62 @@ Explore my portfolio to see examples of my work in:
 Browse through my portfolio to scrutinize my work and connect with me to blend your ideas into a mix of design and experience, delivering to your requirements.
 
 🔗 https://imkatyayan.github.io/Prakhar-portfolio/Index.html
+# Portfolio — Prakhar Katyayan
+
+Personal portfolio website built with vanilla HTML, CSS, and JavaScript.
+
+🔗 **[Live Site](https://yourportfolio.dev)**
+
+---
+
+## Tech
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+---
+
+## Project Structure
+
+```
+├── index.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── docs/
+```
+
+---
+
+## Getting Started
+
+No build step required. Clone and open.
+
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+open index.html
+```
+
+Or serve locally:
+
+```bash
+npx serve .
+# → http://localhost:3000
+```
+
+---
+
+## Deployment
+
+Hosted on **[your platform — e.g. GitHub Pages / Netlify / Vercel]**.
+
+To deploy your own fork, update the live URL and push to your hosting branch.
+
+---
+
+## License
+
+© Prakhar Katyayan. All rights reserved.
