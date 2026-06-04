@@ -20,11 +20,6 @@ Explore my portfolio to see examples of my work in:
 Browse through my portfolio to scrutinize my work and connect with me to blend your ideas into a mix of design and experience, delivering to your requirements.
 
 🔗 https://imkatyayan.github.io/Prakhar-portfolio/Index.html
-# Portfolio — Prakhar Katyayan
-
-Personal portfolio website built with vanilla HTML, CSS, and JavaScript.
-
-🔗 **[Live Site](https://yourportfolio.dev)**
 
 ---
 
