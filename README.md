@@ -61,16 +61,6 @@ npx serve .
 # → http://localhost:3000
 ```
 
----
-
-## Deployment
-
-Hosted on **[your platform — e.g. GitHub Pages / Netlify / Vercel]**.
-
-To deploy your own fork, update the live URL and push to your hosting branch.
-
----
-
 ## License
 
 © Prakhar Katyayan. All rights reserved.
